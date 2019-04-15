@@ -38,6 +38,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         public void setData(News news){
             this.item = news;
 
+            tvName.setText(news.getName());
+            tvCommentTotal.setText("Comment: " + news.getCommentTotal());
+            tvTime.setText(news.getTime());
 
         }
     }
@@ -45,13 +48,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_news, viewGroup);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_news, viewGroup, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-
+        myViewHolder.setData(newsList.get(i));
     }
 
     @Override

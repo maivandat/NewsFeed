@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">News Feed</string>
+    <string name="reset">Reset</string>
+    <string name="more">More</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="comment">COMMENT</string>
+    <string name="time">Time</string>
+    <string name="view">VIEW</string>
+</resources>

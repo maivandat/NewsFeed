@@ -92,13 +92,15 @@ public class NewsPresenter implements NewsContact.Presenter {
             String name;
             String comment;
             String time;
+            String link;
             NodeList nodeList = document.getElementsByTagName("item");
             for (int i = 0; i < nodeList.getLength(); i++){
                 Element element = (Element) nodeList.item(i);
                 name = parser.getValue(element, "title");
                 comment = parser.getValue(element, "slash:comments");
                 time = parser.getValue(element, "pubDate");
-                News news = new News(name, comment, time);
+                link = parser.getValue(element, "link");
+                News news = new News(name, comment, time, link);
                 list.add(news);
             }
             mView.updateNews(list);

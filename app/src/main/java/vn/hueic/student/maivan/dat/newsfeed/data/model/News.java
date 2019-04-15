@@ -4,11 +4,13 @@ public class News {
     private String name;
     private String commentTotal;
     private String time;
+    private String link;
 
-    public News(String name, String commentTotal, String time) {
+    public News(String name, String commentTotal, String time, String link) {
         this.name = name;
         this.commentTotal = commentTotal;
         this.time = time;
+        this.link = link;
     }
 
     public String getName() {
@@ -33,5 +35,13 @@ public class News {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }
